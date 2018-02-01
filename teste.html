@@ -1,0 +1,76 @@
+<p id="nome">Meu nome é Tadeu</p>
+
+<script>
+    var nome = document.querySelector("#nome");
+    nome.innerHTML = "Meu nome é Rafael";
+    console.log(nome);
+</script>
+
+<!-- <input class="frase">
+
+<button class="botao">Copiar</button>
+
+<span class="copia"></span>
+
+<script>
+    var inputFrase = document.querySelector('.frase');
+    var botao = document.querySelector('.botao');
+    var copia = document.querySelector('.copia');
+
+    function botaoHandler() {
+    	console.log("entrou na function");
+    	copia.textContent = inputFrase.value;
+    	inputFrase.value = '';
+    }
+    botao.addEventListener('click', botaoHandler);
+</script>
+</br></br>
+<input class="9numero">
+<input class="9tabuada">
+<span class="9resultado"></span>
+<button class="9botao" onchange="">Calcula</button>
+
+
+<script>
+	console.log("teste");
+    botao.addEventListener('click', function() {
+        getform().resultado.textContent = calcula(getform().numero, getForm().tabuada);
+    });
+
+    function getForm() {
+	    var form = {
+		    botao: document.querySelector('.botao'),
+		    numero: document.querySelector('.numero'),
+		    tabuada: document.querySelector('.tabuada'),
+		    resultado: document.querySelector('.resultado')
+		}
+		return form;
+    }
+
+    function calcula(numA, numB) {
+    	return numA * numB;
+    }
+</script>
+
+</br></br>
+<input class="numero">
+<input class="tabuada">
+<span class="resultado"></span>
+<button class="botao">Calcula</button>
+<script>
+
+    var botao = document.querySelector('.botao');
+    var numero = document.querySelector('.numero');
+    var tabuada = document.querySelector('.tabuada');
+    var resultado = document.querySelector('.resultado');
+
+    botao.addEventListener('click', function() {
+
+        resultado.textContent = numero.value * tabuada.value;
+
+    });
+
+
+</script>
+
+-- >
