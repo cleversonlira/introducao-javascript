@@ -22,8 +22,7 @@ function validaPaciente(paciente, peso, altura) {
 	} else if (!validaAltura(altura)) {
 		paciente.querySelector(".info-imc").textContent = "Altura inválida!";
 		addClass(paciente);
-	} else {
-		console.log(paciente.querySelector(".info-nome").textContent);
+	} else {		
 		paciente.querySelector(".info-imc").textContent = calculaImc(peso, altura);
 	}	
 }

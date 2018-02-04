@@ -135,6 +135,10 @@ button[disabled=disabled], button:disabled {
 	background-color: lightcoral;
 }
 
+.mensagens-erro {
+	color: red;
+}
+
 #mensagens-erro {
 	color: red;
 }
@@ -142,4 +146,14 @@ button[disabled=disabled], button:disabled {
 .fadeOut {
 	opacity: 0;
 	transition: 0.5s;
+}
+
+#filtro-busca {
+	width: 152px;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.invisivel {
+	display: none;
 }

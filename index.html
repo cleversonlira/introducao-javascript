@@ -8,7 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css">		
 	</head>
 	<body>
-
 		<header>
 			<div class="container">
 				<h1 class="titulo">Aparecida Nutrição</h1>
@@ -17,6 +16,12 @@
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
+				
+				<label>
+					Busque por: 
+					<input type="text/submit/hidden/button/etc" id="filtro-busca" value="">
+				</label>				
+
 				<table>
 					<thead>
 						<tr>
@@ -29,7 +34,7 @@
 					</thead>
 					<tbody id="tabela-pacientes">
 						<tr class="paciente" id="primeiro-paciente">
-							<td class="info-nome">Paulo</td>
+							<td class="info-nome" name="nome">Paulo</td>
 							<td class="info-peso">0</td>
 							<td class="info-altura">2.00</td>
 							<td class="info-gordura">10</td>
@@ -37,7 +42,7 @@
 						</tr>
 
 						<tr class="paciente" >
-							<td class="info-nome">João</td>
+							<td class="info-nome" name="nome">João</td>
 							<td class="info-peso">80</td>
 							<td class="info-altura">11.72</td>
 							<td class="info-gordura">40</td>
@@ -45,7 +50,7 @@
 						</tr>
 
 						<tr class="paciente" >
-							<td class="info-nome">Erica</td>
+							<td class="info-nome" name="nome">Erica</td>
 							<td class="info-peso">54</td>
 							<td class="info-altura">1.64</td>
 							<td class="info-gordura">14</td>
@@ -53,14 +58,14 @@
 						</tr>
 
 						<tr class="paciente">
-							<td class="info-nome">Douglas</td>
+							<td class="info-nome" name="nome">Douglas</td>
 							<td class="info-peso">85</td>
 							<td class="info-altura">1.73</td>
 							<td class="info-gordura">24</td>
 							<td class="info-imc">0</td>
 						</tr>
 						<tr class="paciente" >
-							<td class="info-nome">Tatiana</td>
+							<td class="info-nome" name="nome">Tatiana</td>
 							<td class="info-peso">46</td>
 							<td class="info-altura">1.55</td>
 							<td class="info-gordura">19</td>
@@ -68,6 +73,10 @@
 						</tr>
 					</tbody>
 				</table>
+
+				<span id="erro-ajax" class="mensagens-erro invisivel">Erro ao buscar os pacientes</span>
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar</button>
+
 				<div>										
 					<input id="changeTitle" type="text" name="changeTitle" placeholder="Mude o Titulo" onchange="changeTitle(this.value)">
 					<input type="submit" value="Change">					
@@ -99,9 +108,11 @@
 			    </form>				   
 			</section>
 		</main>
+		<script src="js/buscar-pacientes.js"></script>
 		<script src="js/calcula-imc.js"></script>
 		<script src="js/form.js"></script>
 		<script src="js/remover-paciente.js"></script>
+		<script src="js/filtro.js"></script>
 	</body>
 </html>
 

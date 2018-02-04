@@ -1,17 +1,15 @@
 
 var enviarPaciente = document.querySelector("#adicionar-paciente");
+var tabela = document.querySelector("#tabela-pacientes");
 
 enviarPaciente.addEventListener("click", function(event) {
 	event.preventDefault();
 
 	var form = document.querySelector("#form-adiciona");
-
 	var paciente = getPaciente(form);
-
 	var erros = validaForm(paciente);
 
-	if(erros.length == 0) {
-		var tabela = document.querySelector("#tabela-pacientes");
+	if(erros.length == 0) {		
 		tabela.appendChild(montaTr(paciente));		
 	} else {
 		showErrorMessage(erros);
@@ -20,24 +18,18 @@ enviarPaciente.addEventListener("click", function(event) {
 	form.reset();
 	var mensagensErro = document.querySelector("#mensagens-erro");
 	mensagensErro.innerHTML = "";
-	
-// testes
-/*	var teste = document.querySelectorAll("#form-adiciona");
-	console.log(teste);
-	
-	teste = [];
-	teste.push(teste);
-	console.log(teste);
-
-	addRemotion(teste);	*/
-
-// fim testes;
 });
+
+function adicionaPacienteNaTabela(pacientes) {	
+	pacientes.forEach(function(paciente) {
+		tabela.appendChild(montaTr(paciente));
+	});
+}
 
 function showErrorMessage(erros) {
 	var ul = document.querySelector("#mensagens-erro");	
 	ul.innerHTML = "";
-	erros.forEach(function (erro){
+	erros.forEach(function(erro) {
 		var li = document.createElement("li");
 		li.textContent = erro;
 		ul.appendChild(li);

@@ -1,4 +1,34 @@
-<ul class="lista">
+<meta charset="utf-8">
+
+<script>
+
+    function pulaLinha(){
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+    var idade = parseInt(prompt("Qual é sua idade"));
+    var temCarteira = prompt("Tem carteira? Responda S ou N");
+
+    if((idade >= 18) && (temCarteira == "S" || temCarteira == "s")){
+        mostra("Pode dirigir");
+
+    }
+
+    if(idade < 18) {
+        mostra("Nao pode dirigir");
+    }
+
+</script>
+
+<!--<ul class="lista">
     <li>A</li>
     <li>B</li>
     <li>C</li>
